@@ -10,6 +10,10 @@ nav {
   padding: 30px 25px;
 }
 
+h1, h3 {
+  text-align: center;
+}
+
 .nav-title{
   color: #61DAFB;
   justify-content: left;
@@ -71,4 +75,13 @@ th, td {
   background-color: #21222A;
   color: white;
   text-align: center;
+}
+
+.home-blurb{
+  padding: 20px;
+  text-align: center;
+}
+
+.card-text{
+  padding: 0px 30px;
 }
