@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
 import { connect } from 'react-redux';
 import {addCourse} from '../actions'
+import {useNavigate} from 'react-router-dom'
 
 function Form(props) {
+
+    let navigate = useNavigate();
 
     const [courseState, setCourseState] = useState({
         name: '',
@@ -15,6 +18,7 @@ function Form(props) {
         e.preventDefault();
         
         props.addCourse(courseState)
+        navigate('/courses')
     }
 
     const handleChange = (e) => {
