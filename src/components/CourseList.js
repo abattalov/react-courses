@@ -1,13 +1,26 @@
 import React from 'react'
 import Form from './Form'
+import {connect} from 'react-redux';
+import Course from './Course';
 
-function CourseList() {
+
+function CourseList(props) {
+
+  const courses = props.courses.map((course) => <Course key={course.id} id={course.id} name={course.name} location={course.location} holes={course.holes} notes={course.notes}/>)
+
   return (
     <div>
-      <h2>Courses</h2>
+      <br/>
       <Form/>
+      {courses}
     </div>
   )
 }
 
-export default CourseList
+const mapStateToProps = state => {
+  return {
+    courses: state.courses
+  }
+}
+
+export default connect(mapStateToProps)(CourseList)
