@@ -13,11 +13,11 @@ export const addCourse = (course) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Accept": "application.json"
+                "Accept": "application/json"
             },
             body: JSON.stringify({course})
         })
             .then(resp => resp.json())
-            .then(course => console.log(course))
+            .then(course => dispatch({type: "ADD_COURSE", course}))
     }
 }
