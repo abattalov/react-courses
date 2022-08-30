@@ -8,7 +8,7 @@ function Navbar() {
         <Link to='/'><button className='nav-button'>Home</button></Link>
         <Link to='/courses'><button className='nav-button'>Courses</button></Link>
         <Link to='/courses/new'><button className='nav-button'>Create A Course</button></Link>
-        <Link to='/about'><button className='nav-button'>About</button></Link>
+        <Link to='/about'><button className='nav-button'>About Creator</button></Link>
     </nav>
   )
 }
