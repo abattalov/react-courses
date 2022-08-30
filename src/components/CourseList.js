@@ -11,7 +11,6 @@ function CourseList(props) {
   return (
     <div>
       <br/>
-      <Form/>
       {courses}
     </div>
   )

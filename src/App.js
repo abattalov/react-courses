@@ -9,6 +9,7 @@ import CourseList from './components/CourseList';
 import About from './components/About';
 import {connect} from 'react-redux';
 import {getCourses} from './actions'
+import Form from './components/Form';
 
 function App(props) {
 
@@ -28,6 +29,7 @@ function App(props) {
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route exact path="/courses" element={<CourseList/>}/>
+        <Route exact path="/courses/new" element={<Form/>}/>
         <Route exact path="/about" element={<About/>}/>
         <Route path='*' element={<ErrorPage/>}/>
       </Routes>
